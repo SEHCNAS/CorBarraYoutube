@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Barra do youtube",
+  "version": "1.0",
+  "description": "Trocar a cor da barra do youtube",
+  "action": {
+    "default_popup": "CorBarraYoutube.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+	"scripting",
+	"storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],  // Define quais URLs o script será injetado
+      "js": ["content.js"]
+    }
+  ]
+}
